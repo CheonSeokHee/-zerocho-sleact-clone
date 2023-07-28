@@ -14,7 +14,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 
 const config: Configuration = {
   name: 'sleact',
-  mode: isDevelopment ? 'development' : 'production',
+  mode: isDevelopment ? 'development' : 'production', // 개발용 / 배포용
   devtool: !isDevelopment ? 'hidden-source-map' : 'eval',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
@@ -40,7 +40,7 @@ const config: Configuration = {
             [
               '@babel/preset-env',
               {
-                targets: { browsers: ['IE 10'] },
+                targets: { browsers: ['IE 10' , 'last 2 chrome versions'] },
                 debug: isDevelopment,
               },
             ],
@@ -68,7 +68,7 @@ const config: Configuration = {
       //   files: "./src/**/*",
       // },
     }),
-    new webpack.EnvironmentPlugin({ NODE_ENV: isDevelopment ? 'development' : 'production' }),
+    new webpack.EnvironmentPlugin({ NODE_ENV: isDevelopment ? 'development' : 'production' }), //프론트 엔드에서 NODE_ENV에 접근하게끔 설정 원래 백만 접근 가능
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -76,7 +76,7 @@ const config: Configuration = {
     publicPath: '/dist/',
   },
   devServer: {
-    historyApiFallback: true, // react router
+    historyApiFallback: true, // react router 설정정보
     port: 3090,
     devMiddleware: { publicPath: '/dist/' },
     static: { directory: path.resolve(__dirname) },

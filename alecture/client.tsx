@@ -7,7 +7,7 @@ render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-  document.querySelector('#app'),
+  document.querySelector('#app'), //id가 app인거에 안에다가 렌더링 하겠다.
 );
 
 // pages - 서비스 페이지
