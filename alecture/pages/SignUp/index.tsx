@@ -60,10 +60,12 @@ const SignUp = () => {
     [email, nickname, password, passwordCheck, mismatchError],
   );
 
+  // 자리 중요, return 문들은 hooks 함수들 보다 무조건 아래에 있어야 한다.
   if (data === undefined) {
     return <div>로딩중...</div>;
   }
 
+  // 자리 중요, return 문들은 hooks 함수들 보다 무조건 아래에 있어야 한다.
   if (data) {
     return <Redirect to="/workspace/sleact/channel/일반" />;
   }

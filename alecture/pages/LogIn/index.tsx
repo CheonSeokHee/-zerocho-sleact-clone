@@ -25,7 +25,7 @@ const LogIn = () => {
           },
         )
         .then((response) => {
-          revalidate();
+          revalidate(); // swr 호출
         })
         .catch((error) => {
           setLogInError(error.response?.data?.statusCode === 401);
@@ -70,6 +70,7 @@ const LogIn = () => {
       <LinkContainer>
         아직 회원이 아니신가요?&nbsp;
         <Link to="/signup">회원가입 하러가기</Link>
+        {/*href를 안쓰는 이유 spa 구조에서는 새로고침의 취약한데 Link를 쓰면 화면 전환만 시켜주기 때문에 용이 */}
       </LinkContainer>
     </div>
   );
