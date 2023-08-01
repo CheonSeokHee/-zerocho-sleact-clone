@@ -1,7 +1,12 @@
-import React from "react";
+import React from 'react';
+import Home from './App/index';
 
 const App = () => {
-    return <div>으앙아아아아</div>;
+  return (
+    <div>
+      <Home />
+    </div>
+  );
 };
 
 export default App;

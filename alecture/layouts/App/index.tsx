@@ -6,7 +6,8 @@ const LogIn = loadable(() => import('@pages/LogIn'));
 const SignUp = loadable(() => import('@pages/SignUp'));
 const Workspace = loadable(() => import('@layouts/Workspace'));
 
-const App = () => {
+//todo App -> Aaaa 임시 테스트 용도, 네이미 다시 지정해주어야함
+const Home = () => {
   return (
     <Switch>
       <Redirect exact path="/" to="/login" />
@@ -17,4 +18,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;
