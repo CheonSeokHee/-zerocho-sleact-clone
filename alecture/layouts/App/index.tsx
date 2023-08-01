@@ -7,6 +7,7 @@ const SignUp = loadable(() => import('@pages/SignUp'));
 const Workspace = loadable(() => import('@layouts/Workspace'));
 
 //todo App -> Aaaa 임시 테스트 용도, 네이미 다시 지정해주어야함
+//git commit 테스트
 const Home = () => {
   return (
     <Switch>
